@@ -1,6 +1,6 @@
 ﻿namespace JoelNickolsInfo465
 {
-    partial class Form1
+    partial class frmAuthenticateUser
     {
         /// <summary>
         /// Required designer variable.

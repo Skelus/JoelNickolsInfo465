@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace JoelNickolsInfo465
 {
-    public partial class Form1 : Form
+    public partial class frmMainPanel : Form
     {
-        public Form1()
+        public frmMainPanel()
         {
             InitializeComponent();
         }
