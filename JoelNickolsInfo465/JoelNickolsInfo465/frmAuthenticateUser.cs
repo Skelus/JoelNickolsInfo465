@@ -30,6 +30,7 @@ namespace JoelNickolsInfo465
 
         }
 
+        frmMainPanel mainPanel = new frmMainPanel();
         private void btnLogin_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(global::JoelNickolsInfo465.Properties.Settings.Default.Database1ConnectionString);
@@ -38,7 +39,7 @@ namespace JoelNickolsInfo465
             string txtUser = txtLoginID.Text;
             string txtPass = txtPassword.Text;
 
-            string query = "SELECT * FROM Users WHERE LoginId=@user AND Password =@password";
+            string query = "SELECT * FROM Users WHERE LoginId=@user AND Password =@password"; //check for valid userid and password
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.Parameters.Add(new SqlParameter("@user",txtUser));
             cmd.Parameters.Add(new SqlParameter("@password", txtPass));
@@ -46,13 +47,19 @@ namespace JoelNickolsInfo465
 
             SqlDataReader dr = cmd.ExecuteReader();
 
-            if (dr.HasRows == true) //checks to see if WHERE condition is satisfied
+            //successful login
+            if (dr.HasRows == true) 
             {
-                MessageBox.Show("Login Successfull");
+                
+                lblAdvice.Text = "Login Successful";
+                mainPanel.Show();
+                this.Hide();
             }
+            //failed login
             else
             {
-                MessageBox.Show("Invalid Login");
+                lblAdvice.ForeColor = Color.DarkRed;
+                lblAdvice.Text = "Invalid Login";
             }
         }
 
