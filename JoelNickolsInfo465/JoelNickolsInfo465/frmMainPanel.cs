@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace JoelNickolsInfo465
 {
@@ -15,6 +16,11 @@ namespace JoelNickolsInfo465
         public frmMainPanel()
         {
             InitializeComponent();
+        }
+
+        private void frmMainPanel_Load(object sender, EventArgs e)
+        {
+            lblAdvice.Text = "Hello ";
         }
     }
 }

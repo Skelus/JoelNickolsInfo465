@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -31,7 +30,7 @@ namespace JoelNickolsInfo465
         }
 
         frmMainPanel mainPanel = new frmMainPanel();
-        private void btnLogin_Click(object sender, EventArgs e)
+        public void btnLogin_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(global::JoelNickolsInfo465.Properties.Settings.Default.Database1ConnectionString);
             con.Open();
@@ -50,7 +49,6 @@ namespace JoelNickolsInfo465
             //successful login
             if (dr.HasRows == true) 
             {
-                
                 lblAdvice.Text = "Login Successful";
                 mainPanel.Show();
                 this.Hide();

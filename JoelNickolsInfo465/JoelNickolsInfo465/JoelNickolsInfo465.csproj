@@ -82,6 +82,9 @@
     <EmbeddedResource Include="frmAuthenticateUser.resx">
       <DependentUpon>frmAuthenticateUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMainPanel.resx">
+      <DependentUpon>frmMainPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
