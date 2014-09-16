@@ -14,6 +14,8 @@ namespace JoelNickolsInfo465
 {
     public partial class frmAuthenticateUser : Form
     {
+       
+
         public frmAuthenticateUser()
         {
             InitializeComponent();
@@ -37,6 +39,8 @@ namespace JoelNickolsInfo465
 
             string txtUser = txtLoginID.Text;
             string txtPass = txtPassword.Text;
+
+            
 
             string query = "SELECT * FROM Users WHERE LoginId=@user AND Password =@password"; //check for valid userid and password
             SqlCommand cmd = new SqlCommand(query, con);
@@ -65,5 +69,8 @@ namespace JoelNickolsInfo465
         {
 
         }
+
+        
+        }
     }
-}
+

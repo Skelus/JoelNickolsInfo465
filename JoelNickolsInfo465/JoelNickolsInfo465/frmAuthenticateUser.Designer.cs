@@ -114,7 +114,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox txtLoginID;
+        public System.Windows.Forms.TextBox txtLoginID;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lblLoginID;
         private System.Windows.Forms.Label lblPassword;

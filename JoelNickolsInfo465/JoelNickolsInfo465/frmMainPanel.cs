@@ -13,14 +13,20 @@ namespace JoelNickolsInfo465
 {
     public partial class frmMainPanel : Form
     {
+        
         public frmMainPanel()
         {
             InitializeComponent();
         }
 
+        
+
         private void frmMainPanel_Load(object sender, EventArgs e)
         {
-            lblAdvice.Text = "Hello ";
+             
+            lblAdvice.Text =;
         }
     }
+
+
 }
