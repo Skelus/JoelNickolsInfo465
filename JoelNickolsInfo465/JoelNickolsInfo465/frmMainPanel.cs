@@ -24,7 +24,7 @@ namespace JoelNickolsInfo465
         private void frmMainPanel_Load(object sender, EventArgs e)
         {
              
-            lblAdvice.Text =;
+            lblAdvice.Text ="hello";
         }
     }
 
